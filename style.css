@@ -1,0 +1,165 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #007bff; /* أزرق */
+    --secondary-color: #28a745; /* أخضر */
+    --background-color: #f8f9fa; /* رمادي فاتح */
+    --card-background: #ffffff; /* أبيض */
+    --text-color: #343a40; /* أسود داكن */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Changa', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    direction: rtl;
+    text-align: right;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--card-background);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: var(--secondary-color);
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.fact-card {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border-right: 5px solid var(--primary-color);
+}
+
+.fact-card strong {
+    color: var(--primary-color);
+}
+
+.button {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 30px auto 0;
+    padding: 15px 25px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #1e7e34;
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+/* Game Page Specific Styles */
+.question-box {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.4em;
+    color: #856404;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.option-button {
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: 3px solid var(--primary-color);
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.option-button:hover {
+    background-color: #0056b3;
+}
+
+.option-button.correct {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.option-button.incorrect {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+#result {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    min-height: 40px;
+}
+
+#score {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.home-link {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.home-link:hover {
+    background-color: #5a6268;
+}
